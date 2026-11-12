@@ -1,0 +1,50 @@
+:root {
+  --ink: #e9e2d0;
+  --night: #1a1d2b;
+  --blood: #8e1b22;
+  --brass: #b8955a;
+  --muted: #9a97a3;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--night);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+
+.app {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 15vh 1.5rem 3rem;
+}
+
+.title {
+  font-size: clamp(3rem, 12vw, 6rem);
+  line-height: 0.95;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  border-bottom: 3px solid var(--blood);
+  padding-bottom: 0.5rem;
+}
+
+.lead { color: var(--muted); font-size: 1.2rem; line-height: 1.6; margin: 0 0 3rem; }
+
+.setup { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.setup label { font-size: 1.1rem; }
+
+.stepper { display: flex; align-items: center; gap: 0.75rem; }
+.stepper output { font-size: 1.5rem; min-width: 2ch; text-align: center; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--brass);
+  border-radius: 4px;
+  padding: 0.4rem 0.9rem;
+}
+button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+.start { background: var(--blood); border-color: var(--blood); padding: 0.6rem 1.4rem; }
+.start:hover { background: #a6232b; }
